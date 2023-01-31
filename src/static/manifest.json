@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Wordtune Clone",
+    "version": "0.01",
+    "short_name": "Wordtune Clone",
+    "action": {
+        "default_icon": {
+            "16": "resources/icon-16.png",
+            "32": "resources/icon-32.png",
+            "48": "resources/icon-48.png",
+            "128": "resources/icon-128.png"
+        },
+        "default_title": "Wordtune Clone",
+        "default_popup": "popup.html"
+    },
+    "description": "Copy anything to your phone in mili-seconds.",
+    "icons": {
+        "16": "resources/icon-16.png",
+        "32": "resources/icon-32.png",
+        "48": "resources/icon-48.png",
+        "128": "resources/icon-128.png"
+    },
+    "author": "Sahir khan",
+    "offline_enabled": true,
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'",
+        "sandbox": "sandbox allow-scripts; script-src 'self' 'https://apis.google.com/' 'https://www.gstatic.com/' 'https://*.firebaseio.com' 'https://www.googleapis.com' 'https://ajax.googleapis.com'; object-src 'self'"
+    }
+}

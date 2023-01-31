@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Phone</title>
+</head>
+
+<body>
+
+    <div class="pop-up-container">
+
+        <div id="cpytphone" class="modal-bg">
+            <div id="modal">
+                <div id="signin-form-container">
+
+                    <span class="form-header">Sign In
+                    </span>
+
+                    <form data-formtype="signIn" id="copy-to-phone-login-form">
+                        <input id="loginemail" name="email" type="email" placeholder="Email" required>
+                        <input id="loginpassword" name="password" type="password" placeholder="Password" required>
+                        <label class="incorrect-details-label" id="incorrect-details" for="loginpassword">Please enter
+                            correct
+                            details.</label>
+                        <div class="login-action-container">
+                            <span class="show-another-form create-new-account" data-value="signup">Create New
+                                Account</span>
+                            <button name="submit" id="submit" type="submit">Sign in</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div id="signup-form-container">
+
+                    <span class="form-header">Sign Up
+                        <!-- <a href="#close" id="close">&#215;</a> -->
+                    </span>
+
+                    <form data-formtype="signUp" id="copy-to-phone-signup-form">
+                        <input id="name" name="name" type="text" placeholder="Your Name" required>
+                        <input id="email" name="email" type="email" placeholder="Your Email" required>
+                        <input id="password" name="password" type="password" placeholder="Create Password" required>
+                        <label class="incorrect-details-label" id="email-already-exist">This email is already
+                            registered.</label>
+                        <div class="login-action-container">
+                            <span class="show-another-form already-account" data-value="signin">Sign in</span>
+                            <button name="submit" id="submit" type="submit">Sign up</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/popup.js"></script>
+</body>
+
+</html>
